@@ -51,10 +51,9 @@ body{
       left: 15px;
       box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
       animation: card_up 4s linear infinite;
-      background-image: url(C:\Users\PS Mods\Desktop\Projeto_psmods_namoro); /* Substitua 'caminho/para/sua/imagem.jpg' pela URL da sua imagem */
+      background-image: url('https://i.imgur.com/hinuf1Q.jpeg'); /* Substitua 'caminho/para/sua/imagem.jpg' pela URL da sua imagem */
       background-size: cover; /* Para garantir que a imagem cubra todo o cartão */
   }
-
 @keyframes card_up{
       from{
             transform: translateY(0);
