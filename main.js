@@ -3,11 +3,11 @@ const btnYes = document.querySelector(".btn-yes");
 
 btnYes.addEventListener("click", function() {
     // Defina o caminho da nova página HTML
-    const nextPage = "https://github.com/alanxdpro/psmodsnamoro/blob/main/corpo.html";
-    //const nextPage = "c:\\Users\\PS Mods\\Desktop\\Projeto_psmods_namoro\\corpo.html";//
+    const nextPage = "corpo.html";
     // Redirecione o usuário para a nova página
     window.location.href = nextPage;
 });
+
 
 // Função para calcular a distância entre dois pontos
 function calculateDistance(x1, y1, x2, y2) {
