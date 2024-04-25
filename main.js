@@ -3,7 +3,8 @@ const btnYes = document.querySelector(".btn-yes");
 
 btnYes.addEventListener("click", function() {
     // Defina o caminho da nova página HTML
-    const nextPage = "c:\\Users\\PS Mods\\Desktop\\Projeto_psmods_namoro\\corpo.html";
+    const nextPage = "https://github.com/alanxdpro/psmodsnamoro/blob/main/corpo.html";
+    //const nextPage = "c:\\Users\\PS Mods\\Desktop\\Projeto_psmods_namoro\\corpo.html";//
     // Redirecione o usuário para a nova página
     window.location.href = nextPage;
 });
