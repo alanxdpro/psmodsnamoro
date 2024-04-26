@@ -1,0 +1,5 @@
+Editor de texto: https://notepad-plus-plus.org/downloads/v8.6.4/
+
+site hospendar imagem online https://imgur.com/upload
+
+site vercel para hospetar site do github 
