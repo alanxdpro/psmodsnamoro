@@ -5,7 +5,6 @@ body {
     height: 100vh;
     background: cornflowerblue;
     margin: 0;
-    overflow: hidden; /* Adicionando overflow hidden para evitar rolagem indesejada */
 }
 
 .container {
@@ -34,7 +33,6 @@ body {
     width: 300px;
     height: 200px;
     background: rgb(175,68,109);
-    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 .envelope::before {
@@ -50,10 +48,11 @@ body {
 }
 
 .card {
-    position: relative;
+    position: absolute;
     width: 270px;
     height: 170px;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    top: 5px;
+    left: 15px;
     box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
     animation: card_up 4s linear infinite;
     background-image: url('https://i.imgur.com/MFZlVsr.jpeg'); /* Substitua 'caminho/para/sua/imagem.jpg' pela URL da sua imagem */
@@ -95,6 +94,9 @@ body {
     font-weight: bold; /* Texto em negrito para maior destaque */
     letter-spacing: 1px; /* Espaçamento entre letras para melhor legibilidade */
     text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    /* background: linear-gradient(to left, black, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */ /* Comentado para remover o efeito de gradiente */
 }
 
 .card_emoji {
@@ -262,7 +264,5 @@ body {
 
 .audio-player {
     width: 100%;
-    margin: 20px auto 0;
-    display: block;
-    max-width: 300px; /* Ajuste a largura máxima conforme necessário */
+    margin-top: 20px;
 }
