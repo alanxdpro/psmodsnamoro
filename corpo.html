@@ -4,31 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agora Somos Namorados!</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
+        }
+
+        .intro-text {
+            background: rgba(255, 182, 193, 0.8);
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 800px;
+            color: #8b0000;
+            text-align: justify;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro-text h1 {
+            color: #ff1493;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .intro-text p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            background: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .popup-content button:hover {
+            background: #e01483;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .frame {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: #ff69b4;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <div class="intro-text">
         <h1>Erika Maia</h1>
-        <p>
-            Agradeço ao universo, destino ou coincidência por terem colocado você em meu caminho, que me acolhe, 
-            me passa confiança rumo à vida.
-        </p>
-        <p>
-            Gostaria de saber se você aceita iniciar uma jornada comigo nessa vida? Primeiramente um namoro! 
-            Aonde eu desejo conhecer você realmente! E daí em diante a vontade de DEUS!
-        </p>
+        <p>Agradeço ao universo, destino ou coincidência por terem colocado você em meu caminho...</p>
     </div>
 
     <div class="container">
         <div class="frame">
-            <div class="envelope"></div>
-            <div class="card">
-                <div class="text">AGORA VC É<br>MINHA NAMORADA!<br></div>
-                <div class="card_emoji" style="font-size: 50px;">&#x2764;&#xfe0f;</div>
-            </div>
+            <img src="https://i.imgur.com/hinuf1Q.jpeg" alt="Imagem de Envelope">
         </div>
     </div>
- <!-- Popup para tocar música -->
+
+    <!-- Popup para tocar música -->
     <div class="popup" id="popup">
         <div class="popup-content">
             <p>Clique abaixo para tocar a música!</p>
