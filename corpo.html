@@ -1,36 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+    <audio controls>
+        <source src="C:\Users\PS Mods\Documents\meu codigos\carta de namorados\𝐆𝐞𝐨𝐫𝐠𝐞.mp3" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGORA SOMOS NAMORADOS!!</title>
+    <title>Agora Somos Namorados!</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
             margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
         }
+
         .intro-text {
-            max-width: 90%;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            color: #333;
-            line-height: 1.6;
-            font-size: 16px;
+            background: rgba(255, 182, 193, 0.8);
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 800px;
+            color: #8b0000;
+            text-align: justify;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .intro-text h1 {
-            font-size: 24px;
-            color: #e91e63;
-            margin-bottom: 10px;
+            color: #ff1493;
+            text-align: center;
+            font-size: 2.5em;
         }
+
+        .intro-text p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
         .container {
-            margin-top: 20px;
+            position: relative;
+        }
+
+        .frame {
+            position: relative;
+            top: 50px;
+            cursor: pointer;
+            animation: up 3s linear infinite;
+        }
+
+        @keyframes up {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-80px);
+            }
+        }
+
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: #ff69b4;
+        }
+
+        .card {
+            position: absolute;
+            width: 270px;
+            height: 170px;
+            top: 5px;
+            left: 15px;
+            box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+            background-image: url('https://i.imgur.com/hinuf1Q.jpeg');
+            background-size: cover;
+            background-position: center;
+            animation: card_up 4s linear infinite;
+        }
+
+        .text {
+            position: absolute;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            line-height: 25px;
+            top: 10px;
+            left: 105px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .card_emoji {
+            position: absolute;
+            height: 70px;
+            margin: 0 40px;
+            bottom: -1px;
+            right: 20px;
+            top: 85px;
+            transform: rotate(-2.5deg);
+            width: 100px;
         }
     </style>
 </head>
@@ -38,49 +117,36 @@
     <div class="intro-text">
         <h1>Erika Maia</h1>
         <p>
-            Agradeço ao universo, destino ou coincidência por terem colocado você em meu caminho, 
-            que me acolhe, me passa confiança rumo à vida.
+            Agradeço ao universo, destino ou coincidência por terem colocado você em meu caminho, que me acolhe, 
+            me passa confiança rumo à vida.
         </p>
         <p>
             Queria saber o que você pensa quando alguém fala de mim pra você, ou quando você escuta meu nome. 
             Queria saber como você se sente quando vê alguém com o meu perfume ou com o mesmo jeito que o meu. 
-            Eu fico me perguntando se seu coração acelera quando me vê Online, ou quando recebe alguma mensagem minha. 
-            E eu fico me perguntando se você sente em relação a mim, o mesmo que eu sinto em relação a você.
+            Eu fico me perguntando se seu coração acelera quando me vê online, ou quando recebe alguma mensagem 
+            minha. E eu fico me perguntando se você sente em relação a mim, o mesmo que eu sinto em relação a você.
         </p>
         <p>
             Vivemos procurando alguém para amar, para chamar de nosso, pra viver do nosso lado por um bom e longo tempo. 
-            E a melhor coisa do mundo é quando encontramos esse alguém e um algo fora daquilo que vivemos, e não esperamos 
-            temos medo, mas é normal ter medo de ser feliz de viver aquilo que algum dia não vislumbramos, mas eu aceito viver esse medo com você, 
-            eu poderia planejar várias coisas mas você é simples então...
+            E a melhor coisa do mundo é quando encontramos esse alguém e um algo fora daquilo que vivemos, e não esperamos, 
+            temos medo, mas é normal ter medo de ser feliz, de viver aquilo que algum dia não vislumbramos. 
+            Mas eu aceito viver esse medo com você, eu poderia planejar várias coisas, mas você é simples, então...
         </p>
         <p>
             Gostaria de saber se você aceita iniciar uma jornada comigo nessa vida? Primeiramente um namoro! 
             Aonde eu desejo conhecer você realmente! E daí em diante a vontade de DEUS!
         </p>
     </div>
+
     <div class="container">
         <div class="frame">
             <div class="envelope"></div>
-            <div class="front"></div>
             <div class="card">
                 &#x2764;&#xfe0f;
-                <div class="text">AGORA VC É<br>MINHA NAMORADA!<br><!--Em vez do coração, vocês podem escrever um NOME--></div>
+                <div class="text">AGORA VC É<br>MINHA NAMORADA!<br></div>
                 <div class="card_emoji" style="font-size: 50px;">&#x2764;&#xfe0f;</div>
             </div>
-            <div class="emoji_types">
-                <div class="one">&#x2764;&#xfe0f;</div>
-                <div class="two">&#x2764;&#xfe0f;</div>
-                <div class="three">&#x2764;&#xfe0f;</div>
-                <div class="four">&#x2764;&#xfe0f;</div>
-                <div class="five">&#x2764;&#xfe0f;</div>
-                <div class="six">&#x2764;&#xfe0f;</div>
-            </div>
         </div>
-        <audio controls preload="auto" class="audio-player">
-            <source src="https://github.com/alanxdpro/psmodsnamoro/raw/refs/heads/main/Iris(MP3_160K)_1.mp3" type="audio/mp3">
-            Seu navegador não suporta o elemento de áudio.
-        </audio>
     </div>
-    <div class="shadow"></div>
 </body>
 </html>
