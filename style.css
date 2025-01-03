@@ -1,255 +1,153 @@
-body{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: cornflowerblue;
-}
-.container{
-      position: relative;
-}
-
-.frame{
-      position: relative;
-      top: 50px;
-      cursor: pointer;
-      animation: up 3s linear infinite;
+/* Estilo Geral */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
 }
 
-@keyframes up{
-      0%, 100%{
-            transform: translateY(0);
-      }50%{
-            transform: translateY(-80px);
-      }
+.intro-text {
+    background: rgba(255, 182, 193, 0.9);
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 90%;
+    color: #8b0000;
+    text-align: justify;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.envelope{
-      position: relative;
-      width: 300px;
-      height: 200px;
-      background: rgb(175,68,109);
+.intro-text h1 {
+    color: #ff1493;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.envelope::before{
-      background: rgb(230, 116, 159);
-      content: '';
-      position: absolute;
-      width: 212px;
-      height: 212px;
-      transform: rotate(45deg);
-      top: -105px;
-      left: 44px;
-      border-radius: 30px 0 0 0;
+.intro-text p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.frame {
+    position: relative;
+    top: 20px;
+    animation: up 3s linear infinite;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #ff69b4;
 }
 
 .card {
-      position: absolute;
-      width: 270px;
-      height: 170px;
-      top: 5px;
-      left: 15px;
-      box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
-      background-image: url('https://i.imgur.com/hinuf1Q.jpeg'); /* Certifique-se de que a URL é acessível */
-      background-size: cover;
-      background-position: center;
-      animation: card_up 4s linear infinite;
-  }
-  
-
-@keyframes card_up{
-      from{
-            transform: translateY(0);
-      }
-      to{
-            transform: translateY(-8em);
-      }
-}
-
-.card::before{
-      content: '';
-      position: absolute;
-      border: 4px solid #2bb843;
-      border-style: dotted;
-      width: 240px;
-      height: 140px;
-      left: 12px;
-      top: 12px;
+    position: absolute;
+    width: 90%;
+    height: 170px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('https://i.imgur.com/hinuf1Q.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: -5px -5px 50px rgba(0, 0, 0, 0.4);
 }
 
 .text {
-      position: absolute;
-      font-family: Arial, sans-serif; /* Alterado para uma fonte sans-serif mais limpa */
-      font-size: 18px;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      line-height: 25px;
-      top: 10px;
-      left: 105px;
-      color: #fff; /* Cor do texto definida como branco */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra do texto para destacá-lo */
-      font-weight: bold; /* Texto em negrito para maior destaque */
-      letter-spacing: 1px; /* Espaçamento entre letras para melhor legibilidade */
-      text-transform: uppercase; /* Transforma o texto em maiúsculas */
-      /* background: linear-gradient(to left, black, indigo, blue, green, yellow, orange, red);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */ /* Comentado para remover o efeito de gradiente */
-  }
-  
-
-.card_emoji{
-      position: absolute;
-      height: 70px;
-      margin: 0 40px;
-      bottom: -1px;
-      right: 20px;
-      top: 85px;
-      transform: rotate(-2.5deg);
-      width: 100px;
-}
-.emoji_types::before, .emoji_types::after{
-      content: '';
-      height: 30px;
-      position: absolute;
-      width: 30px;
+    position: absolute;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    top: 20px;
+    left: 10%;
+    right: 10%;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    line-height: 1.4;
 }
 
-.emoji_types::before{
-      top: -15px;
-      left: 0px;
-}
-.emoji_types::after{
-      left: 15px;
-      top: 0px;
-}
-.front{
-      position: absolute;
-      border-right: 180px solid rgb(116, 38, 68);
-      border-top: 95px solid transparent;
-      border-bottom: 100px solid transparent;
-      left: 120px;
-      top: 5px;
-      width: 0px;
-      height: 0;
-      z-index: 10;
+.card_emoji {
+    position: absolute;
+    font-size: 2rem;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.front::before{
-      position: absolute;
-      content: '';
-      border-left: 300px solid rgb(121, 28, 65);
-      border-top: 195px solid transparent;
-      left: -120px;
-      top: -95px;
-      width: 0px;
-      height: 0px;
-}
-.shadow{
-      position: absolute;
-      width: 330px;
-      height: 25px;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.3);
-      top: 480px;
-      left: 40em;
-      animation: scale 3s linear infinite;
-      z-index: -1;
+/* Animações */
+@keyframes up {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
-@keyframes scale{
-      0%, 100%{
-            transform: scaleX(0.2);
-      }
-      50%{
-            transform: scaleX(0.85);
-      }
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro-text {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .intro-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .frame {
+        top: 10px;
+    }
+
+    .card {
+        height: 150px;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .card_emoji {
+        font-size: 1.5rem;
+    }
 }
 
-.emoji_types{
-      position: absolute;
-      top: 20px;
-}
-.one, .two, .three, .four, .five, .six{
-      display: inline-block;
-      height: 10px;
-      margin: 0 10px;
-      position: relative;
-      transform: rotate(-45deg);
-      width: 10px;
-      top: 50px;
-}
+@media (max-width: 480px) {
+    .intro-text {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
 
-.one::before, .one::after, .two::before, .two::after, .three::before, .three::after, .five::before, .five::after, .six::before, .six::after{
+    .intro-text h1 {
+        font-size: 1.2rem;
+    }
 
-      content: '';
-      border-radius: 50%;
-      height: 10px;
-      position: absolute;
-      width: 10px;
-}
-.one::before, .two::before, .three::before,.five::before, .six::before{
+    .frame {
+        top: 5px;
+    }
 
-      top: 5px;
-      left: 0;
-}
+    .card {
+        height: 140px;
+    }
 
-.one::after, .two::after, .three::after, .four::after, .five::after, .six::after{
-      left: 5px;
-      top: 0;
-}
+    .text {
+        font-size: 0.8rem;
+    }
 
-.one{
-      left: 10px;
-      animation: emoji_types 1s ease-in-out infinite;
+    .card_emoji {
+        font-size: 1.2rem;
+    }
 }
-.two{
-      left: 30px;
-      animation: emoji_types 1.5s ease-in-out infinite;
-}
-.three{
-      left: 50px;
-      animation: emoji_types 2.5s ease-in-out infinite;
-}
-.four{
-      left: 70px;
-      animation: emoji_types 1.7s ease-in-out infinite;
-}
-.five{
-      left: 90px;
-      animation: emoji_types 2.4s ease-in-out infinite;
-}
-.six{
-      left: 100px;
-      animation: emoji_types 2.3s ease-in-out infinite;
-}
-
-@keyframes emoji_types{
-      0%{
-            transform: translateY(0) rotateY(-45deg) scale(0.3);
-            opacity: 0.1;
-      }
-      100%{
-            transform: translateY(-150px) rotateY(-35deg) scale(1.3);
-            opacity: 1;
-      }
-}
-
-.emoji{
-      position: relative;
-      margin-left: 0;
-      animation: emoji 3.1s ease-in-out infinite;
-}
-
-@keyframes emoji{
-      0%{
-            transform: translateY(0) rotateY(-45deg) scale(0.3);
-            opacity: 1;
-      }
-      100%{
-            transform: translateY(-150px) rotateY(-45deg) scale(1.2);
-            opacity: 0.5;
-      }
-}
-
-/*Here ends our programming... I hope you guys like it*/
