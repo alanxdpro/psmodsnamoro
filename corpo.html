@@ -26,7 +26,7 @@
             color: #8b0000;
             text-align: justify;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
+            margin-bottom: 130px;
         }
 
         .intro-text h1 {
@@ -44,7 +44,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 40px; /* Aumente o espaço entre o texto e a animação */
+            margin-top: 40px;
         }
 
         .frame {
@@ -89,19 +89,13 @@
             top: 5px;
             left: 15px;
             box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
-            background-image: url('https://i.imgur.com/hinuf1Q.jpeg');
-            background-size: cover;
-            background-position: center;
-            animation: card_up 4s linear infinite;
+            overflow: hidden; /* Ensure the image fits within the card */
         }
 
-        @keyframes card_up {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-8em);
-            }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners for the image */
         }
 
         .popup {
@@ -143,13 +137,36 @@
 <body>
     <div class="intro-text">
         <h1>Erika Maia</h1>
-        <p>Agradeço ao universo , destino ou coincidência por terem colocado você em meu caminho...</p>
+        <p>
+            Agradeço ao universo, destino ou coincidência por terem colocado você em meu caminho, que me acolhe, 
+            me passa confiança rumo à vida.
+        </p>
+        <p>
+            Queria saber o que você pensa quando alguém fala de mim pra você,
+             ou quando você escuta meu nome. Queria saber como você se sente quando
+              vê alguém com o meu perfume ou com o mesmo jeito que o meu.
+               Eu fico me perguntando se seu coração acelera quando me vê Online,
+                ou quando recebe alguma mensagem minha. E eu fico me perguntando
+                 se você sente em relação a mim, o mesmo que eu sinto em relação a você.
+        </p>
+        <p>
+            Vivemos procurando alguém para amar, para chamar de nosso, pra viver do nosso lado por um bom e longo tempo. E a melhor coisa do mundo é quando encontramos esse alguém e um algo fora daquilo que vivemos, e não esperamos temos medo, mas e normal ter medo de ser feliz de viver aquilo que algum dia não vislumbramos, mas eu aceito viver esse medo com você, eu poderia planejar várias coisas mas você e simples então....
+        </p>
+        <p>
+            Gostaria de saber se você aceita iniciar uma jornada comigo nessa vida? Primeiramente um namoro ! Aonde eu desejo conhecer você realmente! E daí em diante a vontade de DEUS!
+
+        </p>
     </div>
+
+    
 
     <div class="container">
         <div class="frame">
-            <div class="envelope"></div>
-            <div class="card"></div>
+            <div class="envelope">
+                <div class="card">
+                    <img src="https://i.imgur.com/hinuf1Q.jpeg" alt="Cartão de Amor">
+                </div>
+            </div>
         </div>
     </div>
 
