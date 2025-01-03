@@ -1,159 +1,149 @@
-/* Estilo Geral */
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agora Somos Namorados!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo inserido para garantir funcionamento básico */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffb6c1, #ffc0cb);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-.intro-text {
-    background: rgba(255, 182, 193, 0.9);
-    border: 2px solid #ff69b4;
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 90%;
-    color: #8b0000;
-    text-align: justify;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-}
+        .intro-text {
+            background: rgba(255, 182, 193, 0.9);
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 90%;
+            color: #8b0000;
+            text-align: justify;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
 
-.intro-text h1 {
-    color: #ff1493;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
+        .intro-text h1 {
+            color: #ff1493;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
 
-.intro-text p {
-    margin: 10px 0;
-    line-height: 1.6;
-}
+        .intro-text p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
 
-/* Container da carta */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-}
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
 
-.frame {
-    position: relative;
-    animation: up 3s linear infinite;
-}
+        .frame {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            animation: up 3s linear infinite;
+        }
 
-.envelope {
-    position: relative;
-    width: 100%;
-    height: 180px;
-    background: #ff69b4;
-    border-radius: 10px;
-}
+        .envelope {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background: #ff69b4;
+            border-radius: 10px;
+        }
 
-.card {
-    position: absolute;
-    width: 90%;
-    height: 150px;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url('https://i.imgur.com/hinuf1Q.jpeg');
-    background-size: cover;
-    background-position: center;
-    box-shadow: -5px -5px 50px rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-}
+        .envelope::before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            top: 5%;
+            left: 5%;
+            background: rgba(255, 105, 180, 0.5);
+            border-radius: 8px;
+        }
 
-.text {
-    position: absolute;
-    font-family: 'Arial', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    top: 20px;
-    left: 10%;
-    right: 10%;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    line-height: 1.4;
-}
+        .card {
+            position: absolute;
+            width: 90%;
+            height: 150px;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('https://i.imgur.com/hinuf1Q.jpeg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.card_emoji {
-    position: absolute;
-    font-size: 2rem;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+        .text {
+            position: absolute;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            top: 20px;
+            left: 10%;
+            right: 10%;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+            line-height: 1.4;
+        }
 
-/* Animações */
-@keyframes up {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
+        .card_emoji {
+            position: absolute;
+            font-size: 2rem;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .intro-text {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
+        @keyframes up {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-text">
+        <h1>Erika Maia</h1>
+        <p>
+            Agradeço ao universo, destino ou coincidência por terem colocado você em meu caminho, que me acolhe, 
+            me passa confiança rumo à vida.
+        </p>
+        <p>
+            Gostaria de saber se você aceita iniciar uma jornada comigo nessa vida? Primeiramente um namoro! 
+            Aonde eu desejo conhecer você realmente! E daí em diante a vontade de DEUS!
+        </p>
+    </div>
 
-    .intro-text h1 {
-        font-size: 1.5rem;
-    }
-
-    .frame {
-        top: 0;
-    }
-
-    .card {
-        height: 140px;
-    }
-
-    .text {
-        font-size: 0.9rem;
-    }
-
-    .card_emoji {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .intro-text {
-        padding: 10px;
-        font-size: 0.8rem;
-    }
-
-    .intro-text h1 {
-        font-size: 1.2rem;
-    }
-
-    .frame {
-        top: 0;
-    }
-
-    .card {
-        height: 120px;
-    }
-
-    .text {
-        font-size: 0.8rem;
-    }
-
-    .card_emoji {
-        font-size: 1.2rem;
-    }
-}
+    <div class="container">
+        <div class="frame">
+            <div class="envelope"></div>
+            <div class="card">
+                <div class="text">AGORA VC É<br>MINHA NAMORADA!<br></div>
+                <div class="card_emoji">&#x2764;&#xfe0f;</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
