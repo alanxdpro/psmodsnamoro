@@ -4,12 +4,8 @@
     box-sizing: border-box;
 }
 
-.hide {
-    display: none;
-}
-
 body {
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(to right bottom, #ffffff, #ffffff);
@@ -18,81 +14,87 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    zoom: 50%; /* Definindo zoom de 50% na página */
+}
+
+.image-container {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container {
-    position: relative;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    max-width: 400px;
-}
-
-.image-1,
-.image-2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.image-1 {
-    width: 175px;
-}
-
-.image-2 {
-    width: 250px;
+    max-width: 350px;
+    margin-top: 1rem;
 }
 
 .btn {
-    min-width: 120px;
-    padding: 0.75rem 1rem;
-    font-size: 1.25rem;
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
     outline: none;
     border: none;
     background-color: #FF1493;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     color: white;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.btn-no:hover {
+.btn:hover {
     background-color: #FF69B4;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-no:hover {
-    background-color: #FF69B4;
-}
-
-/* Adicionando uma regra para alterar a cor quando o mouse está a 5 cm do botão */
-.btn-no:hover {
-    background-color: #FF69B4;
-}
-
-/* Adicionando uma regra para alterar a cor quando o mouse está a 5 cm do botão */
-.btn-no:hover {
-    background-color: #FF69B4;
-}
-
-
-.btn-yes,
-.btn-no {
-    position: absolute;
-    bottom: 2rem;
-    left: calc(50% - 60px); /* Ajuste manual para centralizar os botões */
-    /* Adicionando margem para evitar que o botão "No" seja cortado */
-    margin-left: 20px;
+.btn-yes {
+    margin-right: 0.5rem;
 }
 
 .btn-no {
-    min-width: 100px; /* Aumentando a largura em 20% */
-    min-height: 35px; /* Aumentando a altura em 20% */
-    /* Adicionando transição ao background para evitar o efeito de corte */
-    
-    margin-left: 50px;
+    margin-left: 0.5rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+
+    .image-container {
+        max-width: 250px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ajustes adicionais para telas muito pequenas */
+@media (max-width: 320px) {
+    .responsive-image {
+        border-radius: 5px;
+    }
+
+    .btn {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
 }
